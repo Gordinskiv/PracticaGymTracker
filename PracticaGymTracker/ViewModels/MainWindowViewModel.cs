@@ -1,4 +1,4 @@
-﻿namespace PracticaApp.ViewModels;
+﻿namespace PracticaGymTracker.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {

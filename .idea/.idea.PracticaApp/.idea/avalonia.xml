@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="PracticaApp/Views/MainWindow.axaml" value="PracticaApp/PracticaApp.csproj" />
+        <entry key="PracticaGymTracker/App.axaml" value="PracticaGymTracker/PracticaGymTracker.csproj" />
       </map>
     </option>
   </component>

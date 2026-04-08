@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace PracticaApp.Views;
+namespace PracticaGymTracker.Views;
 
 public partial class MainWindow : Window
 {

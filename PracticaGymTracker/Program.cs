@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace PracticaApp;
+namespace PracticaGymTracker;
 
 sealed class Program
 {
