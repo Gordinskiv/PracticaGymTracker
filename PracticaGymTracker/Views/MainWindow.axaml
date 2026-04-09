@@ -1,35 +1,52 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:PracticaGymTracker.ViewModels"
+        xmlns:views="using:PracticaGymTracker.Views.Pages"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:practicaGymTracker="clr-namespace:PracticaGymTracker"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PracticaGymTracker.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="PracticaGymTracker">
+    <Window.DataTemplates>
+        <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:WorkoutsViewModel}">
+            <views:WorkoutsView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+            <views:SettingsView/>
+        </DataTemplate>
+    </Window.DataTemplates>
     
-    <Grid ColumnDefinitions="200, *">
+    <Grid ColumnDefinitions="210, *">
+        <ContentControl Content="{Binding CurrentPage}" Grid.Column="1"/>
         <Border Grid.Column="0" Background="#1E1E1E" Padding="15,20,15,20">
             <StackPanel Spacing="15">
-                
                 <TextBlock Text="GYM TRACKER" 
                            Foreground="#FF6347" 
                            FontSize="22" 
                            FontWeight="Black" 
                            HorizontalAlignment="Center" 
                            Margin="0,0,0,30"
-                           LetterSpacing="2"/> <Button Content="Головна" 
+                           LetterSpacing="2"/> 
+                <Button Content="Головна"
+                        Command="{Binding ShowHomeCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="Transparent" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10"/>
                         
-                <Button Content="Тренування" 
+                <Button Content="Тренування"
+                        Command="{Binding ShowWorkoutsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="#FF6347" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8"/>
                         
                 <Button Content="Налаштування" 
+                        Command="{Binding ShowSettingsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="Transparent" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10"/>
@@ -61,6 +78,5 @@
         </Border>
 
     </Grid>
-
-
+    
 </Window>
