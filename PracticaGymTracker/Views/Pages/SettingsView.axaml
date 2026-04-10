@@ -1,11 +1,75 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:PracticaGymTracker.ViewModels"
+             x:DataType="vm:SettingsViewModel"
              x:Class="PracticaGymTracker.Views.Pages.SettingsView">
-    
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Text="Налаштування" Foreground="White"/>
-    </StackPanel>
+
+    <ScrollViewer Padding="20">
+        <StackPanel Spacing="25">
+            
+            <TextBlock Text="{DynamicResource MenuSettings}" FontSize="28" FontWeight="Black" Foreground="{DynamicResource TextWhite}"/>
+
+            <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20">
+                <Grid ColumnDefinitions="*, Auto">
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource SettingsLang}" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource TextWhite}"/>
+                        <TextBlock Text="{DynamicResource SettingsInscription1}" Foreground="{DynamicResource TextMuted}" Margin="0,5,0,0"/>
+                    </StackPanel>
+                    
+                    <Button Grid.Column="1" 
+                            Content="UA | EN" 
+                            Command="{Binding ToggleLanguageCommand}"
+                            Background="{DynamicResource AccentMain}" 
+                            Foreground="White" 
+                            FontWeight="Bold"
+                            FontSize="16"
+                            Padding="20,10"
+                            CornerRadius="8"
+                            Cursor="Hand"/>
+                </Grid>
+            </Border>
+
+            <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20">
+                <Grid ColumnDefinitions="*, Auto">
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource SettingsTheme}" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource TextWhite}"/>
+                        <TextBlock Text="{DynamicResource SettingsInscription2}" Foreground="{DynamicResource TextMuted}" Margin="0,5,0,0"/>
+                    </StackPanel>
+                    
+                    <Button Grid.Column="1" 
+                            Content="{Binding CurrentTheme}" 
+                            Command="{Binding ToggleThemeCommand}"
+                            Background="Transparent" 
+                            BorderBrush="{DynamicResource AccentMain}"
+                            BorderThickness="2"
+                            Foreground="{DynamicResource AccentMain}" 
+                            FontWeight="Black"
+                            FontSize="16"
+                            Padding="20,10"
+                            CornerRadius="8"
+                            Cursor="Hand"/>
+                </Grid>
+            </Border>
+            
+            <Border BorderBrush="#88FF0000" BorderThickness="1" CornerRadius="12" Padding="20" Margin="0,30,0,0">
+                <Grid ColumnDefinitions="*, Auto">
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                        <TextBlock Text="{DynamicResource SettingsLeaveOutAcс}" FontWeight="Bold" FontSize="18" Foreground="#FF5555"/>
+                        <TextBlock Text="{DynamicResource SettingsInscription3}" Foreground="{DynamicResource TextMuted}" Margin="0,5,0,0"/>
+                    </StackPanel>
+                    
+                    <Button Grid.Column="1" 
+                            Content="{DynamicResource BtnLogout}" 
+                            Background="Transparent"
+                            BorderBrush="#FF5555"
+                            BorderThickness="2"
+                            Foreground="#FF5555" 
+                            FontWeight="Bold"
+                            Padding="20,10"
+                            CornerRadius="8"/>
+                </Grid>
+            </Border>
+
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

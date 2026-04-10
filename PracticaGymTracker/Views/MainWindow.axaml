@@ -4,12 +4,12 @@
         xmlns:views="using:PracticaGymTracker.Views.Pages"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:practicaGymTracker="clr-namespace:PracticaGymTracker"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PracticaGymTracker.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="PracticaGymTracker">
+    
     <Window.DataTemplates>
         <DataTemplate DataType="{x:Type vm:HomeViewModel}">
             <views:HomeView/>
@@ -23,7 +23,20 @@
     </Window.DataTemplates>
     
     <Grid ColumnDefinitions="210, *">
+        <TextBlock Grid.Column="1" Text="NO PAIN&#x0a;NO GAIN" 
+                   FontSize="130" 
+                   FontWeight="Black" 
+                   Foreground="{DynamicResource AccentMain}" 
+                   Opacity="0.5" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center" 
+                   TextAlignment="Center">
+            <TextBlock.RenderTransform>
+                <RotateTransform Angle="-15" />
+            </TextBlock.RenderTransform>
+        </TextBlock>
         <ContentControl Content="{Binding CurrentPage}" Grid.Column="1"/>
+        
         <Border Grid.Column="0" Background="#1E1E1E" Padding="15,20,15,20">
             <StackPanel Spacing="15">
                 <TextBlock Text="GYM TRACKER" 
@@ -33,50 +46,25 @@
                            HorizontalAlignment="Center" 
                            Margin="0,0,0,30"
                            LetterSpacing="2"/> 
-                <Button Content="Головна"
+                <Button Content="{DynamicResource MenuMain}"
                         Command="{Binding ShowHomeCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="Transparent" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10"/>
                         
-                <Button Content="Тренування"
+                <Button Content="{DynamicResource MenuWorkouts}"
                         Command="{Binding ShowWorkoutsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="#FF6347" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8"/>
                         
-                <Button Content="Налаштування" 
+                <Button Content="{DynamicResource MenuSettings}" 
                         Command="{Binding ShowSettingsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
                         Background="Transparent" Foreground="#FFFFFF" 
                         FontSize="16" FontWeight="SemiBold" Padding="15,10"/>
             </StackPanel>
         </Border>
-
-        <Border Grid.Column="1" Padding="30">
-            <StackPanel>
-                
-                <TextBlock Text="ДЕНЬ СПИНИ ТА БІЦЕПСА" 
-                           Foreground="#FFFFFF" 
-                           FontSize="28" 
-                           FontWeight="Bold" 
-                           Margin="0,0,0,5"/>
-                           
-                <TextBlock Text="Сьогодні чудовий день, щоб побити свої рекорди." 
-                           Foreground="#888888" 
-                           FontSize="14" 
-                           Margin="0,0,0,30"/>
-                           
-                <Border Background="#1E1E1E" CornerRadius="12" Padding="20" Height="200">
-                    <TextBlock Text="Місце для графіка 1RM або карток тренувань" 
-                               Foreground="#888888" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center"/>
-                </Border>
-                
-            </StackPanel>
-        </Border>
-
     </Grid>
     
 </Window>

@@ -2,9 +2,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:PracticaGymTracker.ViewModels"
+             x:DataType="vm:HomeViewModel"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="PracticaGymTracker.Views.Pages.HomeView">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Text="Головна сторінка" Foreground="Azure"/>
-    </StackPanel>
+
+    <ScrollViewer Padding="30">
+        <StackPanel Spacing="20">
+            <TextBlock Text="{DynamicResource HomeTitle}" FontSize="28" FontWeight="Black" Foreground="White" />
+
+            <UniformGrid Columns="3">
+                <Border Classes="StatCard">
+                    <StackPanel>
+                        <TextBlock Text="{DynamicResource HomeStat1}" Classes="StatLabel" />
+                        <TextBlock Text="{Binding WorkoutsThisWeek}" Classes="StatValue" />
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="StatCard">
+                    <StackPanel>
+                        <TextBlock Text="{DynamicResource HomeStat2}" Classes="StatLabel" />
+                        <TextBlock Text="{Binding LastRecord}" Classes="StatValue" />
+                    </StackPanel>
+                </Border>
+
+                <Border Classes="StatCard">
+                    <StackPanel>
+                        <TextBlock Text="{DynamicResource HomeStat3}" Classes="StatLabel" />
+                        <TextBlock Text="{Binding FavoriteExercise}" Classes="StatValue" FontSize="18" />
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <TextBlock Text="{DynamicResource HomeRecent}" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,20,0,10" />
+            <Border Background="#1E1E1E" CornerRadius="12" Height="200">
+                <TextBlock Text="Тут буде список твоїх останніх занять..."
+                           Foreground="#888888" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

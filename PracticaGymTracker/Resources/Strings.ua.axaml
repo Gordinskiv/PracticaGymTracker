@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <System:String x:Key="MenuMain">ГОЛОВНА</System:String>
+    <System:String x:Key="MenuWorkouts">ТРЕНУВАННЯ</System:String>
+    <System:String x:Key="TitleExercises">СПИСОК ВПРАВ</System:String>
+    <System:String x:Key="BtnLogout">ВИЙТИ</System:String>
+    <System:String x:Key="MenuSettings">НАЛАШТУВАННЯ</System:String>
+    <System:String x:Key="HomeTitle">ОГЛЯД АКТИВНОСТІ</System:String>
+    <System:String x:Key="HomeStat1">ТРЕНУВАНЬ ТИЖНЯ</System:String>
+    <System:String x:Key="HomeStat2">ОСТАННІЙ РЕКОРД</System:String>
+    <System:String x:Key="HomeStat3">УЛЮБЛЕНА ВПРАВА</System:String>
+    <System:String x:Key="HomeRecent">ОСТАННІ ЗАПИСИ</System:String>
+    <System:String x:Key="SettingsLang">Мова інтерфейсу (Language)</System:String>
+    <System:String x:Key="SettingsTheme">Тема оформлення</System:String>
+    <System:String x:Key="SettingsInscription1">Зміна застосовується миттєво для всіх екранів</System:String>
+    <System:String x:Key="SettingsInscription2">Перемикання між світлою та темною темами</System:String>
+    <System:String x:Key="SettingsInscription3">Повернутися на екран авторизації</System:String>
+    <System:String x:Key="SettingsLeaveOutAcс">Вихід з аккаунту</System:String>
+
+</ResourceDictionary>

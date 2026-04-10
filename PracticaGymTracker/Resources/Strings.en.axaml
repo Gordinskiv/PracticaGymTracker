@@ -1,0 +1,23 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <System:String x:Key="MenuMain">MAIN PAGE</System:String>
+    <System:String x:Key="MenuWorkouts">WORKOUTS</System:String>
+    <System:String x:Key="TitleExercises">EXERCISES LIST</System:String>
+    <System:String x:Key="BtnLogout">LOG OUT</System:String>
+    <System:String x:Key="MenuSettings">SETTINGS</System:String>
+    <System:String x:Key="HomeTitle">ACTIVITY OVERVIEW</System:String>
+    <System:String x:Key="HomeStat1">WORKOUTS THIS WEEK</System:String>
+    <System:String x:Key="HomeStat2">LATEST PR</System:String>
+    <System:String x:Key="HomeStat3">FAVORITE EXERCISE</System:String>
+    <System:String x:Key="HomeRecent">RECENT LOGS</System:String>
+    <System:String x:Key="SettingsTitle">SETTINGS</System:String>
+    <System:String x:Key="SettingsLang">Interface Language (Мова)</System:String>
+    <System:String x:Key="SettingsTheme">Theme Appearance</System:String>
+    <System:String x:Key="SettingsInscription1">The change is applied instantly to all screens</System:String>
+    <System:String x:Key="SettingsInscription2">Switch between light and dark themes</System:String>
+    <System:String x:Key="SettingsInscription3">Return to the authorization screen</System:String>
+    <System:String x:Key="SettingsLeaveOutAcс">Log out of account</System:String>
+
+</ResourceDictionary>
