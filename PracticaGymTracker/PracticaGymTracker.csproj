@@ -10,7 +10,6 @@
     <ItemGroup>
         <AvaloniaResource Include="Resources\Strings.en.axaml" />
         <AvaloniaResource Include="Resources\Strings.ua.axaml" />
-        <Folder Include="Models\"/>
         <AvaloniaResource Include="Assets\**"/>
         <AvaloniaXaml Remove="Views\Resources\Strings.ua.axaml" />
         <AvaloniaXaml Remove="Views\Resources\Strings.en.axaml" />

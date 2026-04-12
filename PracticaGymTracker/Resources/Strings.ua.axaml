@@ -18,5 +18,11 @@
     <System:String x:Key="SettingsInscription2">Перемикання між світлою та темною темами</System:String>
     <System:String x:Key="SettingsInscription3">Повернутися на екран авторизації</System:String>
     <System:String x:Key="SettingsLeaveOutAcс">Вихід з аккаунту</System:String>
+    <System:String x:Key="WorkoutsDeleteExecutes">Видалити вправу</System:String>
+    <System:String x:Key="WorkoutsAddNewApproach">ДОДАТИ НОВИЙ ПІДХІД</System:String>
+    <System:String x:Key="WorkoutsNameExample">Назва (напр. Тяга)</System:String>
+    <System:String x:Key="WorkoutsWeightExample">Вага (напр. 50 кг)</System:String>
+    <System:String x:Key="WorkoutsRepsExample">Повтори</System:String>
+
 
 </ResourceDictionary>

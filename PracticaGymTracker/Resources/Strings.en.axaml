@@ -19,5 +19,10 @@
     <System:String x:Key="SettingsInscription2">Switch between light and dark themes</System:String>
     <System:String x:Key="SettingsInscription3">Return to the authorization screen</System:String>
     <System:String x:Key="SettingsLeaveOutAcс">Log out of account</System:String>
+    <System:String x:Key="WorkoutsDeleteExecutes">Delete execute</System:String>
+    <System:String x:Key="WorkoutsAddNewApproach">Add a new approach</System:String>
+    <System:String x:Key="WorkoutsNameExample">Name (e.g. Thrust)</System:String>
+    <System:String x:Key="WorkoutsWeightExample">Weight (e.g. 50 kg)</System:String>
+    <System:String x:Key="WorkoutsRepsExample">Reps</System:String>
 
 </ResourceDictionary>

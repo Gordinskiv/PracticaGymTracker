@@ -45,6 +45,10 @@
             </ResourceDictionary.ThemeDictionaries>
 
         </ResourceDictionary>
+        
+        <StreamGeometry x:Key="HomeIcon">
+            
+        </StreamGeometry>
     </Application.Resources>
 
 </Application>
