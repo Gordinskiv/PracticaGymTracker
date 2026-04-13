@@ -16,11 +16,16 @@ public partial class MainWindowViewModel : ViewModelBase
     }
     
     [RelayCommand]
-    private void ShowHome() => CurrentPage = new HomeViewModel();
+    private void ShowHome()
+    {
+        var homeVM = new HomeViewModel();
+        CurrentPage = homeVM; 
+    }
 
     [RelayCommand]
     private void ShowWorkouts() => CurrentPage = new WorkoutsViewModel();
 
     [RelayCommand]
     private void ShowSettings() => CurrentPage = new SettingsViewModel();
+    
 }

@@ -40,15 +40,16 @@
                     <SolidColorBrush x:Key="AccentMain">#FF4500</SolidColorBrush> </ResourceDictionary>
 
                 <ResourceDictionary x:Key="Light">
-                    <SolidColorBrush x:Key="BgDark">#F5F5F5</SolidColorBrush>      <SolidColorBrush x:Key="BgCard">#FFFFFF</SolidColorBrush>      <SolidColorBrush x:Key="TextWhite">#121212</SolidColorBrush>   <SolidColorBrush x:Key="TextMuted">#666666</SolidColorBrush>
-                    <SolidColorBrush x:Key="AccentMain">#D84315</SolidColorBrush>  </ResourceDictionary>
+                    <SolidColorBrush x:Key="BgDark">#F5F5F5</SolidColorBrush>      
+                    <SolidColorBrush x:Key="BgCard">#FFFFFF</SolidColorBrush>      
+                    <SolidColorBrush x:Key="TextWhite">#121212</SolidColorBrush>   
+                    <SolidColorBrush x:Key="TextMuted">#666666</SolidColorBrush>
+                    <SolidColorBrush x:Key="AccentMain">#D84315</SolidColorBrush>  
+                </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
 
         </ResourceDictionary>
-        
-        <StreamGeometry x:Key="HomeIcon">
-            
-        </StreamGeometry>
+
     </Application.Resources>
 
 </Application>

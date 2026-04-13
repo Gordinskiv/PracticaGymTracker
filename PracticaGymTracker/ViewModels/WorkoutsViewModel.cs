@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using PracticaGymTracker.Models;
+using PracticaGymTracker.Services;
 
 namespace PracticaGymTracker.ViewModels;
 
@@ -19,6 +20,8 @@ public partial class WorkoutsViewModel : ViewModelBase
     [ObservableProperty]
     private string _newReps = string.Empty;
     
+    private readonly JsonDataService _dataService;
+    
     [RelayCommand]
     private void AddWorkout()
     {
@@ -35,27 +38,28 @@ public partial class WorkoutsViewModel : ViewModelBase
             
             WorkoutsList.Add(newExercise);
             
+            _dataService.SaveWorkouts(WorkoutsList);
+            
             NewExerciseName = string.Empty;
             NewWeight = string.Empty;
             NewReps = string.Empty;
         }
     }
+
     public WorkoutsViewModel()
     {
-        WorkoutsList = new ObservableCollection<WorkoutItem>
-        {
-            new WorkoutItem { ExerciseName = "Жим лежачи", Weight = "80", Reps = 8 },
-            new WorkoutItem { ExerciseName = "Присідання зі штангою", Weight = "100", Reps = 5 },
-            new WorkoutItem { ExerciseName = "Підтягування", Weight = "Власна вага", Reps = 12 },
-            new WorkoutItem { ExerciseName = "Жим гантелей сидячи", Weight = "24", Reps = 10 }
-        };  
+        _dataService = new JsonDataService();
+        var loadedWorkouts = _dataService.LoadWorkouts();
+        WorkoutsList = new ObservableCollection<WorkoutItem>(loadedWorkouts);
     }
+
     [RelayCommand]
     private void DeleteWorkout(WorkoutItem workout)
     {
         if (workout != null && WorkoutsList.Contains(workout))
         {
             WorkoutsList.Remove(workout);
+            _dataService.SaveWorkouts(WorkoutsList);
         }
     }
 }
