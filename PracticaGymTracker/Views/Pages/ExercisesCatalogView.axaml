@@ -11,7 +11,7 @@
 
         <ScrollViewer Grid.Column="0" Padding="0,0,20,0">
             <StackPanel Spacing="20">
-                <TextBlock Text="КАТАЛОГ ВПРАВ" FontSize="28" FontWeight="Black"
+                <TextBlock Text="{DynamicResource ExercisesCatalog}" FontSize="28" FontWeight="Black"
                            Foreground="{DynamicResource TextWhite}" />
 
                 <ItemsControl ItemsSource="{Binding Catalog}">

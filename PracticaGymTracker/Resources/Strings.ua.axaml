@@ -23,6 +23,14 @@
     <System:String x:Key="WorkoutsNameExample">Назва (напр. Тяга)</System:String>
     <System:String x:Key="WorkoutsWeightExample">Вага (напр. 50 кг)</System:String>
     <System:String x:Key="WorkoutsRepsExample">Повтори</System:String>
+    <System:String x:Key="MenuAnalytics">АНАЛІТИКА</System:String>
+    <System:String x:Key="MenuAchievement">ДОСЯГНЕННЯ</System:String>
+    <System:String x:Key="MenuCatalogOfExercises">Каталог вправ</System:String>
+    <System:String x:Key="AnalyticsAndMeasurement">АНАЛІТИКА ТА ЗАМІРИ</System:String>
+    <System:String x:Key="AnalyticsWeightProgress">ПРОГРЕС ВАГИ (КГ)</System:String>
+    <System:String x:Key="AnalyticsHistoryOfMeasurement">ІСТОРІЯ ЗАМІРІВ</System:String>
+    <System:String x:Key="ExercisesCatalog">КАТАЛОГ ВПРАВ</System:String>
+    
 
 
 </ResourceDictionary>

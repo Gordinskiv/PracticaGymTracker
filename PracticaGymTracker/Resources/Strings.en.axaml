@@ -24,5 +24,12 @@
     <System:String x:Key="WorkoutsNameExample">Name (e.g. Thrust)</System:String>
     <System:String x:Key="WorkoutsWeightExample">Weight (e.g. 50 kg)</System:String>
     <System:String x:Key="WorkoutsRepsExample">Reps</System:String>
+    <System:String x:Key="MenuAnalytics">ANALYTICS</System:String>
+    <System:String x:Key="MenuAchievement">ACHIEVEMENT</System:String>
+    <System:String x:Key="MenuCatalogOfExercises">Catalog of exercises</System:String>
+    <System:String x:Key="AnalyticsAndMeasurement">ANALYTICS AND MEASUREMENT</System:String>
+    <System:String x:Key="AnalyticsWeightProgress">WEIGHT PROGRESS (KG)</System:String>
+    <System:String x:Key="AnalyticsHistoryOfMeasurement">HISTORY OF MEASUREMENT</System:String>
+    <System:String x:Key="ExercisesCatalog">EXERCISES CATALOG</System:String>
 
 </ResourceDictionary>

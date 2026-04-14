@@ -9,6 +9,20 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="PracticaGymTracker">
+    
+    <Window.Styles>
+        <Style Selector="Button.MenuItem">
+            <Setter Property="Transitions">
+                <Transitions>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+        <Style Selector="Button.MenuItem:pointerover">
+            <Setter Property="RenderTransform" Value="scale(1.05)"/>
+        </Style>
+    </Window.Styles>
 
     <Window.DataTemplates>
         <DataTemplate DataType="{x:Type vm:HomeViewModel}">
@@ -44,7 +58,12 @@
                 <RotateTransform Angle="-15" />
             </TextBlock.RenderTransform>
         </TextBlock>
-        <ContentControl Content="{Binding CurrentPage}" Grid.Column="1" />
+        
+        <TransitioningContentControl Grid.Column="1" Content="{Binding CurrentPage}">
+            <TransitioningContentControl.PageTransition>
+                <CrossFade Duration="0:0:0.3" /> 
+            </TransitioningContentControl.PageTransition>
+        </TransitioningContentControl>
 
         <Border Grid.Column="0" Background="#1E1E1E" Padding="15,20,15,20">
             <StackPanel Spacing="15">
@@ -57,7 +76,7 @@
                            LetterSpacing="2" />
                 <Button Command="{Binding ShowHomeCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="20">
                         <PathIcon Data="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8 M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
@@ -68,7 +87,7 @@
 
                 <Button Command="{Binding ShowWorkoutsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="15" 
                                 VerticalAlignment="Center">
@@ -81,39 +100,39 @@
                 
                 <Button Command="{Binding ShowAnalyticsCommand}" 
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="15">
                         <PathIcon Data="M3 3v18h18 M18 17l-6-6-4 4-5-5" Width="20" Height="20" />
-                        <TextBlock Text="АНАЛІТИКА" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Text="{DynamicResource MenuAnalytics}" FontWeight="Bold" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Command="{Binding ShowAchievementsCommand}" 
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="15">
                         <PathIcon Data="M6 9V2h12v7 M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2 M12 22v-4 M8 22h8" 
                                   Width="20" Height="20" />
-                        <TextBlock Text="ДОСЯГНЕННЯ" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Text="{DynamicResource MenuAchievement}" FontWeight="Bold" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
                 
                 <Button Command="{Binding ShowExercisesCatalogCommand}" 
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10" CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="15">
                         <PathIcon Data="m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17 M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
                                   Width="20" Height="20" />
-                        <TextBlock Text="Каталог вправ" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Text="{DynamicResource MenuCatalogOfExercises}" FontWeight="Bold" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
                 <Button Command="{Binding ShowSettingsCommand}"
                         HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                        Background="Transparent" Foreground="#FFFFFF"
+                        Background="Transparent" Foreground="#FFFFFF" Classes="MenuItem"
                         FontSize="16" FontWeight="SemiBold" Padding="15,10 " CornerRadius="8">
                     <StackPanel Orientation="Horizontal" Spacing="10">
                         <PathIcon Data="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
