@@ -28,4 +28,13 @@ public partial class MainWindowViewModel : ViewModelBase
     [RelayCommand]
     private void ShowSettings() => CurrentPage = new SettingsViewModel();
     
+    [RelayCommand]
+    private void ShowAnalytics() => CurrentPage = new AnalyticsViewModel();
+    
+    [RelayCommand]
+    private void ShowAchievements() => CurrentPage = new AchievementsViewModel();
+    
+    [RelayCommand]
+    private void ShowExercisesCatalog() => CurrentPage = new ExercisesCatalogViewModel();
+    
 }
