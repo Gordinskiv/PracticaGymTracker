@@ -43,9 +43,12 @@
         <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
             <views:SettingsView />
         </DataTemplate> 
+        <DataTemplate DataType="{x:Type vm:LoginViewModel}">
+            <views:LoginView/>
+        </DataTemplate>
     </Window.DataTemplates>
 
-    <Grid ColumnDefinitions="220, *">
+    <Grid ColumnDefinitions="Auto, *">
         <TextBlock Grid.Column="1" Text="NO PAIN&#x0a;NO GAIN"
                    FontSize="130"
                    FontWeight="Black"
@@ -58,14 +61,16 @@
                 <RotateTransform Angle="-15" />
             </TextBlock.RenderTransform>
         </TextBlock>
-        
-        <TransitioningContentControl Grid.Column="1" Content="{Binding CurrentPage}">
-            <TransitioningContentControl.PageTransition>
-                <CrossFade Duration="0:0:0.3" /> 
-            </TransitioningContentControl.PageTransition>
-        </TransitioningContentControl>
 
-        <Border Grid.Column="0" Background="#1E1E1E" Padding="15,20,15,20">
+        <Border Grid.Column="1">
+            <TransitioningContentControl Content="{Binding CurrentPage}">
+                <TransitioningContentControl.PageTransition>
+                    <CrossFade Duration="0:0:0.4" /> 
+                </TransitioningContentControl.PageTransition>
+            </TransitioningContentControl>
+        </Border>
+
+        <Border Grid.Column="0" Width="250" IsVisible="{Binding IsMenuVisible}" Background="{DynamicResource BgBeige}" Padding="15,20,15,20">
             <StackPanel Spacing="15">
                 <TextBlock Text="GYM TRACKER"
                            Foreground="#FF6347"

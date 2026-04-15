@@ -31,5 +31,6 @@
     <System:String x:Key="AnalyticsWeightProgress">WEIGHT PROGRESS (KG)</System:String>
     <System:String x:Key="AnalyticsHistoryOfMeasurement">HISTORY OF MEASUREMENT</System:String>
     <System:String x:Key="ExercisesCatalog">EXERCISES CATALOG</System:String>
+    <System:String x:Key="LoginExit">Exit</System:String>
 
 </ResourceDictionary>

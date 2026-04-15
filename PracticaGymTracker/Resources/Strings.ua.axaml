@@ -30,7 +30,6 @@
     <System:String x:Key="AnalyticsWeightProgress">ПРОГРЕС ВАГИ (КГ)</System:String>
     <System:String x:Key="AnalyticsHistoryOfMeasurement">ІСТОРІЯ ЗАМІРІВ</System:String>
     <System:String x:Key="ExercisesCatalog">КАТАЛОГ ВПРАВ</System:String>
-    
-
+    <System:String x:Key="LoginExit">ВИЙТИ</System:String>
 
 </ResourceDictionary>

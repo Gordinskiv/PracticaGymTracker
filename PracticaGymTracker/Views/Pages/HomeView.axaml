@@ -35,7 +35,7 @@
             </UniformGrid>
 
             <TextBlock Text="{DynamicResource HomeRecent}" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,20,0,10" />
-            <Border Background="#1E1E1E" CornerRadius="12" Height="200">
+            <Border Background="{DynamicResource BgBeige}" CornerRadius="12" Height="200">
                 <ItemsControl ItemsSource="{Binding RecentLogs}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>

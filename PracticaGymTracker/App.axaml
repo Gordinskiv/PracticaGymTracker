@@ -33,13 +33,16 @@
 
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Dark">
+                    <SolidColorBrush x:Key="BgBeige">#2A2A2A</SolidColorBrush>
                     <SolidColorBrush x:Key="BgDark">#121212</SolidColorBrush>
                     <SolidColorBrush x:Key="BgCard">#1E1E1E</SolidColorBrush>
                     <SolidColorBrush x:Key="TextWhite">#FFFFFF</SolidColorBrush>
                     <SolidColorBrush x:Key="TextMuted">#888888</SolidColorBrush>
-                    <SolidColorBrush x:Key="AccentMain">#FF4500</SolidColorBrush> </ResourceDictionary>
+                    <SolidColorBrush x:Key="AccentMain">#FF4500</SolidColorBrush>
+                </ResourceDictionary>
 
                 <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="BgBeige">#C8AD7F</SolidColorBrush>
                     <SolidColorBrush x:Key="BgDark">#F5F5F5</SolidColorBrush>      
                     <SolidColorBrush x:Key="BgCard">#FFFFFF</SolidColorBrush>      
                     <SolidColorBrush x:Key="TextWhite">#121212</SolidColorBrush>   

@@ -59,7 +59,8 @@
                     </StackPanel>
                     
                     <Button Grid.Column="1" 
-                            Content="{DynamicResource BtnLogout}" 
+                            Content="{DynamicResource BtnLogout}"
+                            Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).ExitCommand}"
                             Background="Transparent"
                             BorderBrush="#FF5555"
                             BorderThickness="2"
