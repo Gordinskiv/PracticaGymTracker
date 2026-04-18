@@ -46,6 +46,12 @@
         <DataTemplate DataType="{x:Type vm:LoginViewModel}">
             <views:LoginView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:RegisterViewModel}">
+            <views:RegisterView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:AdminPanelViewModel}">
+            <views:AdminPanelView/>
+        </DataTemplate>
     </Window.DataTemplates>
 
     <Grid ColumnDefinitions="Auto, *">
@@ -132,6 +138,17 @@
                         <PathIcon Data="m20 13.7-2.1-2.1a2 2 0 0 0-2.8 0L9.7 17 M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"
                                   Width="20" Height="20" />
                         <TextBlock Text="{DynamicResource MenuCatalogOfExercises}" FontWeight="Bold" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                
+                <Button Classes="MenuItem" 
+                        Command="{Binding ShowAdminPanelCommand}" 
+                        IsVisible="{Binding IsAdminPanelVisible}" 
+                        Background="Transparent" 
+                        Margin="0,0,0,10" Padding="10" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" Spacing="15">
+                        <PathIcon Data="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" 
+                                  Width="20" Height="20" Foreground="#FFD700"/> <TextBlock Text="ПАНЕЛЬ ТРЕНЕРА" FontWeight="Black" Foreground="#FFD700" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 

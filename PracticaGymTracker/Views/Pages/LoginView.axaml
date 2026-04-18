@@ -57,11 +57,13 @@
                         CornerRadius="8"
                         Cursor="Hand" />
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                    <TextBlock Text="Немає акаунту? " Foreground="{DynamicResource TextMuted}" />
-                    <TextBlock Text="Створити зараз" Foreground="{DynamicResource AccentMain}" FontWeight="Bold"
-                               Cursor="Hand" />
-                </StackPanel>
+                <Button Command="{Binding $parent[Window].((vm:MainWindowViewModel)DataContext).ShowRegisterCommand}"
+                        Background="Transparent" Padding="0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Немає акаунту? " Foreground="{DynamicResource TextMuted}"/>
+                        <TextBlock Text="Створити зараз" Foreground="{DynamicResource AccentMain}" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>   
         </Border>
     </Panel>

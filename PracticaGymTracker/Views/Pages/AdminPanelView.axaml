@@ -1,0 +1,63 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:PracticaGymTracker.ViewModels"
+             x:DataType="vm:AdminPanelViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="PracticaGymTracker.Views.Pages.AdminPanelView">
+    
+    <ScrollViewer Padding="20">
+        <StackPanel Spacing="25">
+            
+            <TextBlock Text="ПАНЕЛЬ ТРЕНЕРА" FontSize="28" FontWeight="Black" Foreground="#FFD700"/>
+
+            <UniformGrid Columns="2">
+                <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20" Margin="0,0,10,0">
+                    <StackPanel>
+                        <TextBlock Text="{Binding TotalClients}" FontSize="36" FontWeight="Black" Foreground="{DynamicResource TextWhite}"/>
+                        <TextBlock Text="Всього спортсменів" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20" Margin="10,0,0,0">
+                    <StackPanel>
+                        <TextBlock Text="{Binding ActiveToday}" FontSize="36" FontWeight="Black" Foreground="{DynamicResource AccentMain}"/>
+                        <TextBlock Text="Активних сьогодні" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+
+            <TextBlock Text="ВАШІ ПІДОПІЧНІ" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextWhite}"/>
+            
+            <ItemsControl ItemsSource="{Binding ClientsList}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="15" Margin="0,0,0,10">
+                            <Grid ColumnDefinitions="Auto, *, 150, Auto">
+                                
+                                <Ellipse Grid.Column="0" Width="12" Height="12" Fill="{Binding StatusColor}" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" Foreground="{DynamicResource TextWhite}"/>
+                                    <TextBlock Text="{Binding Goal}" FontSize="13" Foreground="{DynamicResource AccentMain}" Margin="0,4,0,0"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="0,0,20,0">
+                                    <TextBlock Text="{Binding ProgressPercent, StringFormat='{}{0}% до мети'}" FontSize="12" Foreground="{DynamicResource TextMuted}" Margin="0,0,0,5"/>
+                                    <ProgressBar Value="{Binding ProgressPercent}" Height="6" CornerRadius="3" Background="#33FFFFFF" Foreground="{DynamicResource AccentMain}"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="15" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding LastActive}" Foreground="{DynamicResource TextMuted}" VerticalAlignment="Center"/>
+                                    <Button Content="ПРОФІЛЬ" Background="Transparent" Foreground="#FFD700" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="6" Cursor="Hand"/>
+                                </StackPanel>
+                                
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -9,8 +9,10 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     [ObservableProperty]
     private object _currentPage;
+    
     [ObservableProperty] 
-    private bool _isMenuVisible = false; // Спочатку меню приховане!
+    private bool _isMenuVisible = false; 
+    [ObservableProperty] private bool _isAdminPanelVisible = false;
 
     public MainWindowViewModel()
     {
@@ -28,8 +30,9 @@ public partial class MainWindowViewModel : ViewModelBase
         IsMenuVisible = false;
         CurrentPage = new LoginViewModel(PerformLogin); 
     }
-    private void PerformLogin()
+    private void PerformLogin(bool isAdmin = false)
     {
+        IsAdminPanelVisible = isAdmin;
         IsMenuVisible = true;
         ShowHome();
     }
@@ -42,6 +45,12 @@ public partial class MainWindowViewModel : ViewModelBase
     private void Exit()
     {
         ShowLogin();
+    }
+    [RelayCommand]
+    public void ShowRegister()
+    {
+        IsMenuVisible = false;
+        CurrentPage = new RegisterViewModel(PerformLogin, ShowLogin);
     }
     [RelayCommand]
     private void ShowWorkouts() => CurrentPage = new WorkoutsViewModel();
@@ -58,4 +67,6 @@ public partial class MainWindowViewModel : ViewModelBase
     [RelayCommand]
     private void ShowExercisesCatalog() => CurrentPage = new ExercisesCatalogViewModel();
     
+    [RelayCommand]
+    private void ShowAdminPanel() => CurrentPage = new AdminPanelViewModel();
 }
