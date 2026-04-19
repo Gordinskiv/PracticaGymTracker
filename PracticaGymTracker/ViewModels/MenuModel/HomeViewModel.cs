@@ -7,6 +7,9 @@ using PracticaGymTracker.Services;
 
 namespace PracticaGymTracker.ViewModels;
 
+/// <summary>
+/// Відображення сторінку "Головна".
+/// </summary>
 public partial class HomeViewModel : ViewModelBase
 {
     [ObservableProperty] private string _workoutsThisWeek = "0";
@@ -17,12 +20,16 @@ public partial class HomeViewModel : ViewModelBase
 
     [ObservableProperty]
     private ObservableCollection<RecentLogItem> _recentLogs = new();
-
+    
     public HomeViewModel()
     {
         _dataService = new JsonDataService();
         LoadActualData();
     }
+    
+    /// <summary>
+    /// Завантаження актуальних даних з JSON файлу для подальшого відображення їх на віджетах.
+    /// </summary>
     public void LoadActualData()
     {
         var allWorkouts = _dataService.LoadWorkouts();

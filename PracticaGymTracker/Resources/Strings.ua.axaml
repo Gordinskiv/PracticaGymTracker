@@ -31,5 +31,10 @@
     <System:String x:Key="AnalyticsHistoryOfMeasurement">ІСТОРІЯ ЗАМІРІВ</System:String>
     <System:String x:Key="ExercisesCatalog">КАТАЛОГ ВПРАВ</System:String>
     <System:String x:Key="LoginExit">ВИЙТИ</System:String>
-
+    <System:String x:Key="MenuCoach">ПАНЕЛЬ ТРЕНЕРА</System:String>
+    <System:String x:Key="CoachAllAthletes">Всього спортсменів</System:String>
+    <System:String x:Key="CoachActiveToday">Активних сьогодні</System:String>
+    <System:String x:Key="CoachCharities">ВАШІ ПІДОПІЧНІ</System:String>
+    <System:String x:Key="CoachProfile">ПРОФІЛЬ</System:String>
+    
 </ResourceDictionary>

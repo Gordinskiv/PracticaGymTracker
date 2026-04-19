@@ -5,11 +5,21 @@ using PracticaGymTracker.Models;
 
 namespace PracticaGymTracker.ViewModels;
 
+/// <summary>
+/// ViewModel для сторінки каталогу вправ.
+/// Відповідає за відображення списку доступних тренувань, згрупованих за категоріями.
+/// </summary>
 public partial class ExercisesCatalogViewModel : ViewModelBase
 {
+    /// <summary>
+    /// Колекція, що містить усі групи вправ для відображення в меню.
+    /// </summary>
     [ObservableProperty]
     private ObservableCollection<MuscleGroupItem> _catalog;
 
+    /// <summary>
+    /// Назва обраної вправи для відображення на головному екрані каталогу.
+    /// </summary>
     [ObservableProperty] private string _selectedExerciseName = "Виберіть вправу";
 
     public ExercisesCatalogViewModel()

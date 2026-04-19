@@ -1,15 +1,30 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using PracticaGymTracker.Models;
+using CommunityToolkit.Mvvm.Input;
 
 namespace PracticaGymTracker.ViewModels;
 
+/// <summary>
+/// ViewModel для панелі управління тренера.
+/// Дозволяє керувати списком клієнтів та переглядати їхній прогрес.
+/// </summary>
 public partial class AdminPanelViewModel : ViewModelBase
 {
+    /// <summary>
+    /// Динамічна колекція клієнтів. 
+    /// Зміни в цій колекції автоматично відображаються в інтерфейсі (UI).
+    /// </summary>
     [ObservableProperty] 
     private ObservableCollection<ClientItem> _clientsList;
     
+    /// <summary>
+    /// Загальна кількість зареєстрованих клієнтів (для верхньої картки).
+    /// </summary>
     [ObservableProperty] private string _totalClients = "24";
+    /// <summary>
+    /// Кількість клієнтів, які були активні сьогодні (для верхньої картки).
+    /// </summary>
     [ObservableProperty] private string _activeToday = "8";
 
     public AdminPanelViewModel()

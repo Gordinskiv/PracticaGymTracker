@@ -6,6 +6,9 @@ using PracticaGymTracker.Services;
 
 namespace PracticaGymTracker.ViewModels;
 
+/// <summary>
+/// Відображення сторінку Тренування.
+/// </summary>
 public partial class WorkoutsViewModel : ViewModelBase
 {
     [ObservableProperty]
@@ -22,6 +25,9 @@ public partial class WorkoutsViewModel : ViewModelBase
     
     private readonly JsonDataService _dataService;
     
+    /// <summary>
+    /// Додавання вправи, які записується в файл JSON.
+    /// </summary>
     [RelayCommand]
     private void AddWorkout()
     {
@@ -45,14 +51,20 @@ public partial class WorkoutsViewModel : ViewModelBase
             NewReps = string.Empty;
         }
     }
-
+    
+    /// <summary>
+    /// Конструктор, який завантажує з JSON файлу вправи.
+    /// </summary>
     public WorkoutsViewModel()
     {
         _dataService = new JsonDataService();
         var loadedWorkouts = _dataService.LoadWorkouts();
         WorkoutsList = new ObservableCollection<WorkoutItem>(loadedWorkouts);
     }
-
+    /// <summary>
+    /// Видалення вибраної вправи.
+    /// </summary>
+    /// <param name="workout">Виділена вправа</param>
     [RelayCommand]
     private void DeleteWorkout(WorkoutItem workout)
     {

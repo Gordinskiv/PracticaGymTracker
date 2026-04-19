@@ -10,24 +10,23 @@
     <ScrollViewer Padding="20">
         <StackPanel Spacing="25">
             
-            <TextBlock Text="ПАНЕЛЬ ТРЕНЕРА" FontSize="28" FontWeight="Black" Foreground="#FFD700"/>
+            <TextBlock Text="{DynamicResource MenuCoach}" FontSize="28" FontWeight="Black" Foreground="#FFD700"/>
 
             <UniformGrid Columns="2">
                 <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20" Margin="0,0,10,0">
                     <StackPanel>
                         <TextBlock Text="{Binding TotalClients}" FontSize="36" FontWeight="Black" Foreground="{DynamicResource TextWhite}"/>
-                        <TextBlock Text="Всього спортсменів" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
+                        <TextBlock Text="{DynamicResource CoachAllAthletes}" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
                     </StackPanel>
                 </Border>
                 <Border Background="{DynamicResource BgCard}" CornerRadius="12" Padding="20" Margin="10,0,0,0">
                     <StackPanel>
                         <TextBlock Text="{Binding ActiveToday}" FontSize="36" FontWeight="Black" Foreground="{DynamicResource AccentMain}"/>
-                        <TextBlock Text="Активних сьогодні" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
+                        <TextBlock Text="{DynamicResource CoachActiveToday}" Foreground="{DynamicResource TextMuted}" FontWeight="Bold"/>
                     </StackPanel>
                 </Border>
             </UniformGrid>
-
-            <TextBlock Text="ВАШІ ПІДОПІЧНІ" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextWhite}"/>
+            <TextBlock Text="{DynamicResource CoachCharities}" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource TextWhite}"/>
             
             <ItemsControl ItemsSource="{Binding ClientsList}">
                 <ItemsControl.ItemTemplate>
@@ -49,7 +48,7 @@
 
                                 <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="15" VerticalAlignment="Center">
                                     <TextBlock Text="{Binding LastActive}" Foreground="{DynamicResource TextMuted}" VerticalAlignment="Center"/>
-                                    <Button Content="ПРОФІЛЬ" Background="Transparent" Foreground="#FFD700" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="6" Cursor="Hand"/>
+                                    <Button Content="{DynamicResource CoachProfile}" Background="Transparent" Foreground="#FFD700" BorderBrush="#FFD700" BorderThickness="1" CornerRadius="6" Cursor="Hand"/>
                                 </StackPanel>
                                 
                             </Grid>

@@ -32,4 +32,43 @@
       <AdditionalFiles Include="Resources\Strings.en.axaml" />
       <AdditionalFiles Include="Resources\Strings.ua.axaml" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\Pages\Menu\HomeView.axaml.cs">
+        <DependentUpon>HomeView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\WorkoutsView.axaml.cs">
+        <DependentUpon>WorkoutsView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\AnalyticsView.axaml.cs">
+        <DependentUpon>AnalyticsView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\AchievementsView.axaml.cs">
+        <DependentUpon>AchievementsView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\ExercisesCatalogView.axaml.cs">
+        <DependentUpon>ExercisesCatalogView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\AdminPanelView.axaml.cs">
+        <DependentUpon>AdminPanelView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Menu\SettingsView.axaml.cs">
+        <DependentUpon>SettingsView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Authorization\LoginView.axaml.cs">
+        <DependentUpon>LoginView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Views\Pages\Authorization\RegisterView.axaml.cs">
+        <DependentUpon>RegisterView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

@@ -32,5 +32,10 @@
     <System:String x:Key="AnalyticsHistoryOfMeasurement">HISTORY OF MEASUREMENT</System:String>
     <System:String x:Key="ExercisesCatalog">EXERCISES CATALOG</System:String>
     <System:String x:Key="LoginExit">Exit</System:String>
+    <System:String x:Key="MenuCoach">COACH PANEL</System:String>
+    <System:String x:Key="CoachAllAthletes">All athletes</System:String>
+    <System:String x:Key="CoachActiveToday">Active today</System:String>
+    <System:String x:Key="CoachCharities">YOUR CHARITIES</System:String>
+    <System:String x:Key="CoachProfile">PROFILE</System:String>
 
 </ResourceDictionary>

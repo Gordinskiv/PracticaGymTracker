@@ -7,11 +7,18 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace PracticaGymTracker.ViewModels;
 
+/// <summary>
+/// Відображення сторінки налаштування.
+/// </summary>
 public partial class SettingsViewModel : ViewModelBase
 {
     [ObservableProperty]
     private string _currentLanguage = "ua";
-
+    
+    /// <summary>
+    /// Змінює мову на протилежну при викликанню методу.
+    /// З UA на EN(українську на англійську) і протилежно.
+    /// </summary>
     [RelayCommand]
     private void ToggleLanguage()
     {
@@ -41,7 +48,11 @@ public partial class SettingsViewModel : ViewModelBase
     }
     [ObservableProperty]
     private string _currentTheme = "DARK";
-
+    
+    /// <summary>
+    /// Змінює тему на протилежну при викликанню методу.
+    /// З DARK на LIGHT(темну на світлу) і протилежно.
+    /// </summary>
     [RelayCommand]
     private void ToggleTheme()
     {
