@@ -26,7 +26,10 @@ public partial class SettingsViewModel : ViewModelBase
 
         ChangeLanguageDictionaries(CurrentLanguage);
     }
-
+    /// <summary>
+    /// Змінює Resource який буде використовуватися.
+    /// </summary>
+    /// <param name="langCode">Вибрана мова</param>
     private void ChangeLanguageDictionaries(string langCode)
     {
         var app = Application.Current;

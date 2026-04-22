@@ -26,7 +26,7 @@
     <System:String x:Key="WorkoutsRepsExample">Reps</System:String>
     <System:String x:Key="MenuAnalytics">ANALYTICS</System:String>
     <System:String x:Key="MenuAchievement">ACHIEVEMENT</System:String>
-    <System:String x:Key="MenuCatalogOfExercises">Catalog of exercises</System:String>
+    <System:String x:Key="MenuCatalogOfExercises">CATALOG OF EXERCISES</System:String>
     <System:String x:Key="AnalyticsAndMeasurement">ANALYTICS AND MEASUREMENT</System:String>
     <System:String x:Key="AnalyticsWeightProgress">WEIGHT PROGRESS (KG)</System:String>
     <System:String x:Key="AnalyticsHistoryOfMeasurement">HISTORY OF MEASUREMENT</System:String>
